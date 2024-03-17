@@ -2,6 +2,7 @@ package Nak.java;
 
 import java.lang.*;
 
+@SuppressWarnings("unused")
 public final class _Encription
 {
     private String word;

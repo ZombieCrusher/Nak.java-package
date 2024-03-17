@@ -2,6 +2,7 @@ package Nak.java;
 
 import java.lang.*;
 
+@SuppressWarnings("unused")
 class _Util_Code
 {
     protected _Util_Code()
