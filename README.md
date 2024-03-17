@@ -1,2 +1,3 @@
-# "Nak.java" package
- utillity functions in java made by NAKSHATRA_12
+#Source Code of "Nak.java" package
+Source code Nak.java package for java 
+-Created by NAKSHATRA_12
