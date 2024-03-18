@@ -2,7 +2,8 @@ package Nak.java;
 
 import java.lang.*;
 
-@SuppressWarnings("unused")
+//@SuppressWarnings("unused")
+//@SuppressWarnings("deprecation")
 public final class _Util
 {
     private _Util(){};
@@ -54,6 +55,41 @@ public final class _Util
         else
         {
             return false;
+        }
+    }
+
+    public static void shutdownWindows()
+    {
+        try 
+        {
+            Runtime.getRuntime().exec("shutdown -s -t 0");
+        } 
+        catch(Exception e) 
+        {
+            doPrint(e);
+            doPrint("Shutdown Failed");
+        }
+        
+    }
+
+    public static void shutdownWindows( short time )
+    {
+        try
+        {
+            for( short i = 1 ; i <= time ; i++ )
+            {
+                doPrint("Shutting Down Windows in "+time+" seconds!!");
+                Thread.sleep(1000);
+            }
+
+            doPrint("Shutting down windows!");
+            Thread.sleep(1000);
+            Runtime.getRuntime().exec("shutdown -s -t "+time);
+        } 
+        catch(Exception e) 
+        {
+            doPrint(e);
+            doPrint("Shutdown Failed");
         }
     }
 }
