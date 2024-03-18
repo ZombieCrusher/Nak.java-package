@@ -7,12 +7,12 @@ class _Util_Code
 {
     protected _Util_Code(){};
 
-    static final void doPrintInternal( Object obj )
+    protected static final void doPrintInternal( Object obj )
     {
        System.out.println( obj ); 
     }
 
-    static final void doPrintInternal( Object obj , boolean nextLine )
+    protected static final void doPrintInternal( Object obj , boolean nextLine )
     {
         if( nextLine )
         {
