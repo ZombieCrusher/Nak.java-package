@@ -17,7 +17,6 @@ public final class _Math
         return value;
     }
 
-    public static void Combinations(){}
-
-    public static void Permutations(){}
+    //public static void Combinations(){}
+    //public static void Permutations(){}
 }

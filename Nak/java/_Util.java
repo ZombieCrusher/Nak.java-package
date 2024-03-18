@@ -1,6 +1,10 @@
 package Nak.java;
 
 import java.lang.*;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Scanner;
 
 //@SuppressWarnings("unused")
 //@SuppressWarnings("deprecation")
@@ -27,8 +31,8 @@ public final class _Util
 
     public static byte ReturnArrayDimension( Object array )
     {
-        @SuppressWarnings("rawtypes")
-        Class name = array.getClass();
+        //@SuppressWarnings("rawtypes")
+        Class<?> name = array.getClass();
         byte dimensionCount = 0;
         
         while( name.isArray() ) 
@@ -71,7 +75,6 @@ public final class _Util
             doPrint(e);
             doPrint( "Shutdown Failed" );
         }
-        
     }
 
     public static void shutdownWindows( short time )
@@ -104,6 +107,35 @@ public final class _Util
         catch( Exception e )
         {
             doPrint(e);
+        }
+    }
+
+    public static String getInputfromUser()
+    {
+        Scanner sc = new Scanner( System.in );
+        String input = sc.nextLine();
+        sc.close();
+        return input;
+    }
+    
+    public static Scanner createInputscanner()
+    {
+        return new Scanner( System.in );
+    }
+
+    public static boolean IsSystemOnline()
+    {
+        try 
+        {
+            return InetAddress.getByName("www.google.com").isReachable(3000);
+        } 
+        catch( UnknownHostException e ) 
+        {
+            return false;
+        }
+        catch( IOException e)
+        {
+            return false;
         }
     }
 }
