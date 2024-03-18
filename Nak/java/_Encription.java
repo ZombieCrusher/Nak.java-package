@@ -3,13 +3,13 @@ package Nak.java;
 import java.lang.*;
 
 @SuppressWarnings("unused")
-public final class _Encription
+public final class _Encryption
 {
     private String word;
     private int originalWordLength;
     private int encriptedWordLength;
 
-    public _Encription( String s )
+    public _Encryption( String s )
     {
         this.word = s;
         this.originalWordLength = s.length();
@@ -21,7 +21,7 @@ public final class _Encription
         return true;
     }
 
-    private String Encript()
+    private String Encrypt()
     {
         String wordEncripted = this.word;
         return wordEncripted;
@@ -33,7 +33,7 @@ public final class _Encription
         return wordDecrypted;
     }
 
-    private int getEncriptionLength()
+    private int getEncryptionLength()
     {
         int wordLength = 0;
         return wordLength;
