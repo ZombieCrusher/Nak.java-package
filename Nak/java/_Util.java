@@ -62,12 +62,14 @@ public final class _Util
     {
         try 
         {
+            doPrint( "Shutting Down windows!" );
+            doWait( (short) 1 );
             Runtime.getRuntime().exec("shutdown -s -t 0");
         } 
         catch(Exception e) 
         {
             doPrint(e);
-            doPrint("Shutdown Failed");
+            doPrint( "Shutdown Failed" );
         }
         
     }
@@ -78,18 +80,30 @@ public final class _Util
         {
             for( short i = 1 ; i <= time ; i++ )
             {
-                doPrint("Shutting Down Windows in "+time+" seconds!!");
-                Thread.sleep(1000);
+                doPrint( "Shutting Down Windows in "+time+" seconds!!" );
+                doWait( (short) 1 );
             }
 
             doPrint("Shutting down windows!");
-            Thread.sleep(1000);
+            doWait( (short) 1 );
             Runtime.getRuntime().exec("shutdown -s -t "+time);
         } 
         catch(Exception e) 
         {
             doPrint(e);
             doPrint("Shutdown Failed");
+        }
+    }
+
+    public static void doWait( short time )
+    {
+        try 
+        {
+            Thread.sleep( time * 1000 );
+        } 
+        catch( Exception e )
+        {
+            doPrint(e);
         }
     }
 }
