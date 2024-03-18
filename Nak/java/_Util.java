@@ -42,7 +42,7 @@ public final class _Util extends _Util_Code
     public static boolean IsString( Object obj )
     {
         String className = obj.getClass().toString();
-        if( className.substring( 0 ,5 ).toLowerCase().equals( "string" ) )
+        if( className.substring( 0 , 5 ).toLowerCase().equals( "string" ) )
             return true;
 
         return false;
