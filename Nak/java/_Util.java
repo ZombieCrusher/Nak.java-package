@@ -5,9 +5,7 @@ import java.lang.*;
 @SuppressWarnings("unused")
 public final class _Util extends _Util_Code
 {
-    private _Util()
-    {
-    }
+    private _Util(){};
 
     public static void doPrint( Object obj )
     {
@@ -43,8 +41,9 @@ public final class _Util extends _Util_Code
     {
         String className = obj.getClass().toString();
         if( className.substring( 0 , 5 ).toLowerCase().equals( "string" ) )
+        {
             return true;
-
+        }
         return false;
     }
 }
