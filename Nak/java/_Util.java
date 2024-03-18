@@ -3,18 +3,25 @@ package Nak.java;
 import java.lang.*;
 
 @SuppressWarnings("unused")
-public final class _Util extends _Util_Code
+public final class _Util
 {
     private _Util(){};
 
     public static void doPrint( Object obj )
     {
-        doPrintInternal( obj );
+        System.out.println( obj ); 
     }
 
     public static void doPrint( Object obj , boolean nextLine )
     {
-        doPrintInternal( obj , nextLine );
+        if( nextLine )
+        {
+            System.out.println( obj );
+        }
+        else
+        {
+            System.out.print( obj );
+        }
     }
 
     public static byte ReturnArrayDimension( Object array )

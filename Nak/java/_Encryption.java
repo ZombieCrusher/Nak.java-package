@@ -13,7 +13,7 @@ public final class _Encryption
     {
         this.word = s;
         this.originalWordLength = s.length();
-        this.encriptedWordLength = getEncriptionLength();
+        this.encriptedWordLength = getEncryptionLength();
     }
 
     private boolean isValid()
