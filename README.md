@@ -1,4 +1,4 @@
-![license](https://img.shields.io/badge/License-MTL-green.svg)
+![license](https://img.shields.io/badge/License-MIT-green.svg)
 
 # Source Code of "Nak.java" package
 Source code Nak.java package for java 
