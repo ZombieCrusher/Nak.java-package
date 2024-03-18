@@ -44,6 +44,9 @@ public final class _Util extends _Util_Code
         {
             return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
     }
 }
