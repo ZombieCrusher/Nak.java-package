@@ -35,13 +35,32 @@ public final class Rot13
     }
 
     private void Encrypt()
+    {  
+        this.EncryptedMessage = convertWord( this.OriginalMessage );
+    }
+
+    private void Decrypt()
     {
-        String s = this.OriginalMessage;
+        this.OriginalMessage = convertWord( this.EncryptedMessage );
+    }
+
+    public String getEncryptedMessage()
+    {
+        return this.EncryptedMessage;
+    }
+
+    public String getOriginalMessage()
+    {
+        return this.OriginalMessage;
+    }
+
+    private String convertWord( String word )
+    {
         String encryptedMessage = "";
 
-        for( int i = 0 ; i < s.length() ; i++ ) 
+        for( int i = 0 ; i < word.length() ; i++ ) 
         {
-            char letter = s.charAt(i);
+            char letter = word.charAt(i);
 
             if( letter >= 'a' && letter <= 'm' )
             {
@@ -63,48 +82,6 @@ public final class Rot13
             encryptedMessage += letter;
         }
 
-        this.EncryptedMessage = encryptedMessage;
-    }
-
-    private void Decrypt()
-    {
-        String s = this.EncryptedMessage;
-        String originalMessage = "";
-
-        for( int i = 0 ; i < s.length() ; i++ ) 
-        {
-            char letter = s.charAt(i);
-
-            if( letter >= 'a' && letter <= 'm' )
-            {
-                letter += 13;
-            }
-            else if( letter >= 'n' && letter <= 'z' )
-            {
-                letter -= 13;
-            } 
-            else if( letter >= 'A' && letter <= 'M' )
-            {
-                letter += 13;
-            }
-            else if( letter >= 'N' && letter <= 'Z' )
-            {
-                letter -= 13;
-            }
-
-            originalMessage += letter;
-        }
-
-        this.OriginalMessage = originalMessage;
-    }
-
-    private String getEncryptedMessage()
-    {
-        return this.EncryptedMessage;
-    }
-
-    private String getOriginalMessage()
-    {
-        return this.OriginalMessage;
+        return encryptedMessage;
     }
 }

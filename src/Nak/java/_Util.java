@@ -138,4 +138,9 @@ public final class _Util
             return false;
         }
     }
+
+    public static String ReverseString( String word )
+    {
+        return new StringBuilder( word ).reverse().toString();
+    }
 }
