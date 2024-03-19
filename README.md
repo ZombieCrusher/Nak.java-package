@@ -1,5 +1,5 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Language](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+[![Language]](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 
 # Nak.java - A beginner friendly package in Java
 
