@@ -62,6 +62,7 @@ public final class _Util
         }
     }
 
+    @SuppressWarnings("deprecation")
     public static void shutdownWindows()
     {
         try 
@@ -77,6 +78,7 @@ public final class _Util
         }
     }
 
+    @SuppressWarnings("deprecation")
     public static void shutdownWindows( short time )
     {
         try
