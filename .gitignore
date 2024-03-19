@@ -1,8 +1,11 @@
-test.java
+# Folders
 .vscode/
+bin/
+lib/
 Releases/
+
+# Files
+test.java
 *.class
 *.jar
 _Encryption.java
-bin/
-lib/
