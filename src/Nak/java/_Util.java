@@ -51,8 +51,8 @@ public final class _Util
 
     public static boolean IsString( Object obj )
     {
-        String className = obj.getClass().toString();
-        if( className.substring( 0 , 5 ).toLowerCase().equals( "string" ) )
+        String className = obj.getClass().toString().toLowerCase();
+        if( className.contains( "string" ) )
         {
             return true;
         }
