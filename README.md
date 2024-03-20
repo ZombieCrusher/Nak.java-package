@@ -14,5 +14,5 @@ A package in Java for beginners to help them with day to day work or as a refere
 # Disclaimer
 This package has been created purely for the purposes of academic research. Project maintainers are not responsible or liable for misuse of the code and package. Use responsibly.
 
-#Wiki
+# Wiki
 [Click here](https://github.com/ZombieCrusher/Nak.java-package/wiki) to visit the wiki of the package
