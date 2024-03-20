@@ -9,3 +9,4 @@ test.java
 *.class
 *.jar
 _Encryption.java
+build_jar.bat
