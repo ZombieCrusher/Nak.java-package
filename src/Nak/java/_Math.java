@@ -5,7 +5,9 @@ import java.lang.*;
 //@SuppressWarnings("unused")
 public final class _Math 
 {
-    private _Math(){};
+    private _Math()
+    {
+    }
 
     public static int Factorial( int n )
     {

@@ -13,7 +13,9 @@ import java.util.Scanner;
 //@SuppressWarnings("deprecation")
 public final class _Util
 {
-    private _Util(){};
+    private _Util()
+    {
+    }
 
     public static void doPrint( Object obj )
     {
