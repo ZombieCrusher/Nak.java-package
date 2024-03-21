@@ -1,9 +1,12 @@
 package Nak.java;
 
 import java.lang.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+//import java.util.ArrayList;
+//import java.util.List;
 import java.util.Scanner;
 
 //@SuppressWarnings("unused")
@@ -29,7 +32,7 @@ public final class _Util
         }
     }
 
-    public static byte ReturnArrayDimension( Object array )
+    public static byte getArrayDimension( Object array )
     {
         //@SuppressWarnings("rawtypes")
         Class<?> name = array.getClass();
@@ -38,7 +41,7 @@ public final class _Util
         while( name.isArray() ) 
         {
             dimensionCount++;
-            name = name.getComponentType();
+            name = name.getComponentType();            
         }
 
         return dimensionCount;
@@ -155,4 +158,38 @@ public final class _Util
     {
         return System.getProperty("user.name");
     }
+
+    public static String[] getDirectoryFilesList( String path )
+    {
+        return new File( path ).list();
+    }
+
+    public static void printDirectoryFilesList( String path )
+    {
+        File[] directoryItemsList = new File( path ).listFiles();
+        for( File file : directoryItemsList )
+        {
+            doPrint( "File Name = " + file.getName() );
+            doPrint( "File Path = " + file.getAbsolutePath() );
+            //doPrint( "File Size = " + file.getTotalSpace() );
+            doPrint("");
+        }
+    }
+
+    /*
+    public static void printAllArrayElements( Object array )
+    {
+        if( array instanceof Object[] )
+        {
+            for( Object element : (Object[]) array )
+            {
+                printAllArrayElements(element);
+            }
+        }
+        else
+        {
+            doPrint(array+"");
+        }
+    }
+    */
 }
