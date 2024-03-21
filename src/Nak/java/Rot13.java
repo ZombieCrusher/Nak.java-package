@@ -34,18 +34,6 @@ public final class Rot13
         }        
     }
 
-    public void ChangeOriginalMessage( String word )
-    {
-        this.OriginalMessage = word;
-        Encrypt();
-    }
-
-    public void ChangeEncryptedMessage( String word )
-    {
-        this.EncryptedMessage = word;
-        Decrypt();
-    }
-
     public String getEncryptedMessage()
     {
         return this.EncryptedMessage;
@@ -54,6 +42,18 @@ public final class Rot13
     public String getOriginalMessage()
     {
         return this.OriginalMessage;
+    }
+
+    public void changeOriginalMessage( String word )
+    {
+        this.OriginalMessage = word;
+        Encrypt();
+    }
+
+    public void changeEncryptedMessage( String word )
+    {
+        this.EncryptedMessage = word;
+        Decrypt();
     }
 
     private void Encrypt()
