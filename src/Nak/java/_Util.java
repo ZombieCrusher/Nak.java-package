@@ -145,4 +145,14 @@ public final class _Util
     {
         return new StringBuilder( word ).reverse().toString();
     }
+
+    public static String getOperatingSystem()
+    {
+        return System.getProperty("os.name");
+    }
+
+    public static String getSystemUserName()
+    {
+        return System.getProperty("user.name");
+    }
 }
