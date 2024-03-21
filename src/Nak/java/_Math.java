@@ -17,6 +17,24 @@ public final class _Math
         return value;
     }
 
-    //public static void Combinations(){}
-    //public static void Permutations(){}
+    public static int Combination( int n , int r )
+    { 
+        int value = 0;
+        value = Factorial(n) / ( Factorial(r) * Factorial(n - r));
+        return value;
+    }
+
+    public static int Permutation( int n , int r )
+    {
+        int value = 0;
+        if( n == r)
+        {
+            value = Factorial(n);
+        }
+        else
+        {
+            value = Factorial(n) / Factorial(n - r);
+        }
+        return value;
+    }
 }
