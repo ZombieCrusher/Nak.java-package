@@ -56,8 +56,7 @@ public final class _Util
 
     public static boolean IsString( Object obj )
     {
-        String className = obj.getClass().toString().toLowerCase();
-        if( className.contains( "string" ) )
+        if( obj.getClass().toString().toLowerCase().contains( "string" ) )
         {
             return true;
         }
@@ -178,20 +177,17 @@ public final class _Util
         }
     }
 
-    /*
-    public static void printAllArrayElements( Object array )
+    public static boolean isFilePresentInTheDirectory( String path , String fileName)
     {
-        if( array instanceof Object[] )
+        String[] allFiles = new File( path ).list();
+        for( int i = 0 ; i < allFiles.length ; i++ )
         {
-            for( Object element : (Object[]) array )
+            if( allFiles[i].toLowerCase().equals( fileName.toLowerCase() ) )
             {
-                printAllArrayElements(element);
+                return true;
             }
         }
-        else
-        {
-            doPrint(array+"");
-        }
+
+        return false;
     }
-    */
 }
