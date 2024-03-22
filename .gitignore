@@ -10,3 +10,4 @@ test.java
 *.jar
 _Encryption.java
 build_jar.bat
+temp.txt

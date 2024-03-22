@@ -9,8 +9,7 @@ import java.net.UnknownHostException;
 //import java.util.List;
 import java.util.Scanner;
 
-//@SuppressWarnings("unused")
-//@SuppressWarnings("deprecation")
+@SuppressWarnings("unused")
 public final class _Util
 {
     private _Util()
